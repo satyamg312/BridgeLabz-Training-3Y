@@ -1,0 +1,171 @@
+/* Apply border-box to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Main area */
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* Main card */
+.main-card {
+    width: 700px;
+    max-width: 100%;
+
+    padding: 30px;
+
+    background-color: white;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Image */
+.image-section img {
+    width: 200px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+/* Form */
+form {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form h2 {
+    margin-bottom: 8px;
+}
+
+/* Form inputs */
+input,
+textarea {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 2px solid #ddd;
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+/* Focus pseudo-class */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+button {
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #3498db;
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* Hover pseudo-class */
+button:hover {
+    background-color: #217dbb;
+    transform: translateY(-2px);
+}
+
+/* Active pseudo-class */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 18px;
+    background-color: #222;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+
+    .main-card {
+        flex-direction: column;
+        width: 95%;
+        padding: 20px;
+    }
+
+    .image-section img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+}

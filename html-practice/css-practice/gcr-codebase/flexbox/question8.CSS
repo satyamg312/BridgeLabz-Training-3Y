@@ -1,0 +1,113 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Center content */
+main {
+    min-height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Boxes side by side using Flexbox */
+.comparison {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
+/* Common box styling */
+.box {
+    width: 350px;
+    padding: 25px;
+    border: 10px solid;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.box h2 {
+    text-align: center;
+}
+
+/* Default box-sizing: content-box */
+.content-box {
+    box-sizing: content-box;
+    background-color: #dbeafe;
+    border-color: #2563eb;
+}
+
+/* border-box */
+.border-box {
+    box-sizing: border-box;
+    background-color: #dcfce7;
+    border-color: #16a34a;
+}
+
+/* Demo inner boxes */
+.demo-box {
+    width: 100%;
+    padding: 20px;
+    border: 5px solid #333;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Explain the size difference */
+.content-box .demo-box {
+    background-color: #bfdbfe;
+}
+
+.border-box .demo-box {
+    background-color: #bbf7d0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 750px) {
+    .comparison {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .box {
+        width: 90%;
+        max-width: 350px;
+    }
+}

@@ -1,0 +1,119 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main area */
+main {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* Center all tooltip examples using Flexbox */
+.tooltip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Parent element */
+.tooltip-box {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hovered words */
+.tooltip-element {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Tooltip */
+.tooltip-text {
+    position: absolute;
+
+    /* Position above the element */
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #222;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 5px;
+
+    white-space: nowrap;
+    font-size: 14px;
+
+    /* Hidden initially */
+    opacity: 0;
+    visibility: hidden;
+
+    /* Smooth fade-in */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.tooltip-box:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Small arrow below tooltip */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-width: 6px;
+    border-style: solid;
+    border-color: #222 transparent transparent transparent;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .tooltip-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

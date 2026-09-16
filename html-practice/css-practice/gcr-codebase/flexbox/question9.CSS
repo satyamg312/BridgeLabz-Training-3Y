@@ -1,0 +1,130 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Flexbox layout */
+main {
+    min-height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.effects {
+    width: 90%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Individual cards */
+.effect-card {
+    width: 250px;
+    height: 220px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Button */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+
+    background-color: #3498db;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    /* Transition */
+    transition: all 0.3s ease;
+}
+
+/* Pseudo-class + transformation */
+.btn:hover {
+    background-color: #217dbb;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card */
+.card {
+    padding: 30px;
+    background-color: #e8f5e9;
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+    background-color: #81c784;
+    transform: translateY(-8px) rotate(2deg);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Link */
+.link {
+    text-decoration: none;
+    color: #8e44ad;
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+/* Link hover effect */
+.link:hover {
+    color: #e74c3c;
+    transform: scale(1.15);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .effects {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+}

@@ -1,0 +1,149 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Center animations horizontally and vertically */
+main {
+    min-height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animation container */
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   Moving Box Animation
+   ========================= */
+
+.box {
+    width: 120px;
+    height: 80px;
+    background-color: steelblue;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    animation-name: moveBox;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Keyframes for moving box */
+@keyframes moveBox {
+    from {
+        transform: translateX(-50px);
+    }
+
+    to {
+        transform: translateX(50px);
+    }
+}
+
+
+/* =========================
+   Bouncing Ball Animation
+   ========================= */
+
+.ball {
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    border-radius: 50%;
+
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Keyframes for bouncing ball */
+@keyframes bounce {
+    from {
+        transform: translateY(-50px);
+    }
+
+    to {
+        transform: translateY(50px);
+    }
+}
+
+
+/* =========================
+   Color Changing Text
+   ========================= */
+
+.animated-text {
+    animation-name: changeColor;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Keyframes for color-changing text */
+@keyframes changeColor {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: green;
+    }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .animation-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+}

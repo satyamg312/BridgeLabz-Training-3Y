@@ -1,0 +1,192 @@
+/* ==============================
+   BASIC PAGE STYLING
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main content alignment */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Section styling */
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   1. ELEMENT SELECTOR
+   Targets all <p> elements
+   ============================== */
+
+section p {
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+
+/* ==============================
+   2. CLASS SELECTOR
+   Targets elements with class="highlight"
+   ============================== */
+
+.highlight {
+    background-color: yellow;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   3. ID SELECTOR
+   Targets element with id="special"
+   ============================== */
+
+#special {
+    color: white;
+    background-color: purple;
+    padding: 10px;
+}
+
+
+/* ==============================
+   4. ATTRIBUTE SELECTOR
+   Targets links having href attribute
+   ============================== */
+
+a[href] {
+    color: blue;
+    font-weight: bold;
+}
+
+/* Targets only text input */
+input[type="text"] {
+    border: 2px solid green;
+    padding: 8px;
+}
+
+/* Targets only email input */
+input[type="email"] {
+    border: 2px solid orange;
+    padding: 8px;
+}
+
+
+/* ==============================
+   5. DESCENDANT COMBINATOR
+   Space between selectors
+   Targets ALL <p> inside .descendant
+   ============================== */
+
+.descendant p {
+    color: blue;
+}
+
+
+/* ==============================
+   CHILD COMBINATOR >
+   Targets only direct child <p>
+   ============================== */
+
+.child > p {
+    background-color: lightgreen;
+    padding: 8px;
+}
+
+
+/* ==============================
+   ADJACENT SIBLING +
+   Targets the paragraph immediately
+   following the first paragraph
+   ============================== */
+
+.siblings p:first-child + p {
+    background-color: lightblue;
+    padding: 8px;
+}
+
+
+/* ==============================
+   GENERAL SIBLING ~
+   Targets all <p> elements that
+   follow the first paragraph
+   ============================== */
+
+.general-sibling p:first-child ~ p {
+    background-color: lightpink;
+    padding: 8px;
+}
+
+
+/* ==============================
+   LIST STYLING
+   ============================== */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    main {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

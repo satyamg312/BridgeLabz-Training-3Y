@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Box-Sizing Comparison</h1>
+        <p>Understanding content-box and border-box</p>
+    </header>
+
+    <main>
+
+        <section class="comparison">
+
+            <!-- Default content-box -->
+            <article class="box content-box">
+                <h2>Default Box</h2>
+
+                <div class="demo-box">
+                    Content-box
+                </div>
+
+                <p>
+                    With <strong>content-box</strong>, the specified width
+                    applies only to the content. Padding and border are
+                    added to the total size.
+                </p>
+            </article>
+
+            <!-- border-box -->
+            <article class="box border-box">
+                <h2>Border-Box</h2>
+
+                <div class="demo-box">
+                    Border-box
+                </div>
+
+                <p>
+                    With <strong>border-box</strong>, the specified width
+                    includes the content, padding, and border.
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Box-Sizing Demonstration</p>
+    </footer>
+
+</body>
+</html>

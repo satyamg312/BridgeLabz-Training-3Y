@@ -1,0 +1,150 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    /* Soft background gradient */
+    background: linear-gradient(135deg, #e0f2fe, #f5e8ff);
+    color: #222;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Center card using Flexbox */
+main {
+    min-height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card-like container */
+.ui-card {
+    width: 500px;
+    padding: 30px;
+
+    background-color: white;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ui-card h2 {
+    text-align: center;
+}
+
+/* Search bar */
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Search input takes remaining space */
+.search-box input {
+    flex: 1;
+}
+
+/* Focus effect */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    box-shadow: 0 0 5px rgba(108, 92, 231, 0.4);
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Search and primary button */
+.primary,
+.search-box button {
+    background-color: #6c5ce7;
+    color: white;
+}
+
+/* Secondary button */
+.secondary {
+    background-color: #ddd;
+    color: #222;
+}
+
+/* Active effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Buttons alignment */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Dropdown */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+select {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .ui-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+}
