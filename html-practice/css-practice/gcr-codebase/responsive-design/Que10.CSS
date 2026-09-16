@@ -1,0 +1,186 @@
+ /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* Dashboard Grid */
+.dashboard {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+/* Header */
+header {
+    grid-column: 1 / -1;
+
+    padding: 25px 30px;
+    background-color: #222;
+    color: white;
+
+    /* Load animation */
+    animation: loadPage 1s ease-in;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Sidebar */
+aside {
+    padding: 25px 20px;
+    background-color: #333;
+    color: white;
+
+    animation: loadPage 1s ease-in;
+}
+
+aside h2 {
+    margin-bottom: 25px;
+}
+
+/* Sidebar navigation */
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Main content */
+main {
+    padding: 35px;
+}
+
+/* Cards layout */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Dashboard cards */
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+
+    /* Load animation */
+    animation: loadPage 1s ease-in;
+
+    /* Hover transition */
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Code */
+.card code {
+    display: block;
+    padding: 10px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Load animation */
+@keyframes loadPage {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Below 750px */
+@media (max-width: 750px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+
+    /* Sidebar moves to top */
+    aside {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    /* Main content below sidebar */
+    main {
+        grid-column: 1;
+        grid-row: 3;
+        padding: 25px 15px;
+    }
+
+    /* Cards stack vertically */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 500px) {
+
+    header {
+        padding: 20px;
+    }
+
+    aside {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,106 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main */
+main {
+    padding: 40px 30px;
+}
+
+/* Grid layout */
+.principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Principle boxes */
+.principle-box {
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Smooth transition */
+    transition: background 0.4s ease,
+                color 0.4s ease,
+                transform 0.4s ease;
+}
+
+.principle-box h2 {
+    margin-bottom: 15px;
+}
+
+.principle-box p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Code example */
+pre {
+    background-color: #eeeeee;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: monospace;
+}
+
+/* Hover gradient and text color */
+.principle-box:hover {
+    background: linear-gradient(135deg, #333, #666);
+    color: white;
+    transform: translateY(-8px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Below 600px: Single column */
+@media (max-width: 600px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .principles {
+        grid-template-columns: 1fr;
+    }
+
+    .principle-box {
+        padding: 25px;
+    }
+}
